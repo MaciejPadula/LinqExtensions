@@ -11,7 +11,10 @@ public static class ToListExtensions
 
     public static IEnumerable<T> ToListIf<T>(this IEnumerable<T> enumerable, bool condition)
     {
-        if (!condition) return enumerable;
+        if (!condition)
+        {
+            return enumerable;
+        }
 
         return enumerable.ToList();
     }
